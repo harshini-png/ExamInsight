@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamInsight – Smart Exam Preparation Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+<section id="loginPage" class="login-container">
+
+<div class="login-wrapper">
+
+<img class="start-img"
+src="https://img.freepik.com/premium-photo/3d-cute-cartoon-girl-studying-education-illustration_988987-3029.jpg?w=2000"
+width="700">
+
+
+<p id="loginError">Invalid Username or Password</p>
+
+<div class="login-card">
+
+<h2>🔐 ExamInsight Login</h2>
+<p>Access your Smart Exam Preparation Tool</p>
+
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+
+<button id="loginBtn">Login</button>
+<button id="googleLogin" class="social-btn google">
+Continue with Google
+</button>
+
+<button id="appleLogin" class="social-btn apple">
+Continue with Apple
+</button>
+
+<p id="loginError">Invalid Username or Password</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MAIN WEBSITE -->
+<div id="mainWebsite">
+
+<nav class="navbar">
+<div class="nav-brand">ExamInsight</div>
+
+<ul class="nav-menu">
+<li><a href="#home" class="active">Home</a></li>
+<li><a href="#analyzer">Pattern Analyzer</a></li>
+<li><a href="#generator">Sample Paper</a></li>
+<li><a href="#planner">Study Planner</a></li>
+<li><button id="logoutBtn" class="logout-btn">Logout</button></li>
+</ul>
+</nav>
+
+<main>
+
+<!-- HOME -->
+<section id="home" class="section active-section">
+
+<div class="hero">
+<h1>ExamInsight – Smart Exam Preparation Tool</h1>
+<p>Analyze past papers, generate practice exams, and plan your study schedule.</p>
+</div>
+
+<div class="feature-cards">
+
+<div class="card">
+<h3>📊 Pattern Analyzer</h3>
+<p>Analyze exam topics frequency.</p>
+</div>
+
+<div class="card">
+<h3>📝 Sample Paper Generator</h3>
+<p>Generate practice exam papers automatically.</p>
+</div>
+
+<div class="card">
+<h3>📅 Study Planner</h3>
+<p>Create your weekly timetable.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PATTERN ANALYZER -->
+<section id="analyzer" class="section">
+
+<h2>Exam Pattern Analyzer</h2>
+
+<div class="card">
+
+<h3>Step 1: Define Topics</h3>
+
+<input type="text" id="topicsInput"
+placeholder="Stack, Queue, Linked List"
+value="Stack, Queue, Linked List, Trees, Sorting">
+
+<button id="updateTopicsBtn">Update Topics</button>
+
+<div class="topics-display">
+<strong>Current Topics:</strong>
+<span id="topicsList">Stack, Queue, Linked List, Trees, Sorting</span>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Step 2: Paste Questions</h3>
+
+<textarea id="questionInput"
+rows="8"
+placeholder="Paste exam questions"></textarea>
+
+<button id="analyzeBtn">Analyze Topics</button>
+
+</div>
+
+<div id="analysisResult" class="card result-card">
+
+<h3>Topic Frequency</h3>
+
+<table>
+
+<thead>
+<tr>
+<th>Topic</th>
+<th>Frequency</th>
+<th>Percentage</th>
+</tr>
+</thead>
+
+<tbody id="tableBody"></tbody>
+
+</table>
+
+<div id="topTopicInfo"></div>
+
+</div>
+
+</section>
+
+
+<!-- SAMPLE PAPER -->
+<section id="generator" class="section">
+
+<h2>Sample Paper Generator</h2>
+
+<div class="card">
+<button id="generatePaperBtn">Generate Sample Paper</button>
+</div>
+
+<div id="paperResult" class="card result-card">
+<h3>Practice Exam Paper</h3>
+<div id="paperContent"></div>
+</div>
+
+</section>
+
+
+<!-- STUDY PLANNER -->
+<section id="planner" class="section">
+
+<h2>Study Planner</h2>
+
+<div class="card">
+
+<h3>Add Task</h3>
+
+<input type="text" id="taskInput" placeholder="Study Stack">
+
+<select id="taskDaySelect">
+
+<option>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+<option>Saturday</option>
+<option>Sunday</option>
+
+</select>
+
+<button id="addTaskBtn">Add Task</button>
+
+</div>
+
+<div class="card">
+<h3>📋 Tasks</h3>
+<ul id="taskList"></ul>
+</div>
+
+<div class="card">
+
+<h3>📅 Weekly Timetable</h3>
+
+<div id="currentWeekInfo"></div>
+
+<div id="weeklyTimetable" class="timetable-grid"></div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
